@@ -1,30 +1,30 @@
-# Laporan tim — <Nama tim>
-
-Satu dokumen bersama, enam bagian. Angka di bagian Hasil ditarik dari `results/*/metrics.json`
-(tabel otomatis: `reports/hasil_komparasi.md` dari `python run_all.py`).
+# Laporan tim — LUXVISION (Tim 25)
 
 ## Ringkasan
-Apa yang dibandingkan, pada kasus apa, dan satu kalimat temuan utama.
+Eksperimen ini membandingkan lima keluarga model deep learning pada kasus klasifikasi/regresi dataset LUXVISION dengan protokol evaluasi yang dibakukan. Temuan utama akan dilaporkan setelah seluruh model menyelesaikan evaluasi pada Sprint akhir.
 
 ## Protokol
-Apa yang membuat perbandingan antar-model adil: split beku (seed 2026), metrik, anggaran
-komputasi, jumlah seed, cara data uji dievaluasi (sekali, oleh siapa, kapan).
+Perbandingan antar-model dijaga keadilannya dengan aturan berikut:
+- **Split Data:** Menggunakan split beku dari `src.common.split` dengan seed 2026[cite: 1].
+- **Metrik Utama:** Evaluasi menggunakan akurasi dan macro-F1 (atau RMSE/MAE/R² jika regresi)[cite: 1].
+- **Anggaran Komputasi:** Maksimal 20 menit pelatihan per run di CPU/GPU laptop[cite: 1].
+- **Eksperimen:** Setiap konfigurasi akhir dijalankan pada 3 seed (seed 1, 2, 3)[cite: 1].
+- **Evaluasi Data Uji:** Data uji hanya dievaluasi satu kali pada sprint terakhir oleh Penjaga Data (`--final`)[cite: 1].
 
 ## Hasil
-Tabel komparasi lima model (+ baseline): val_acc dan val_macro_f1 rerata ± sb dari 3 seed,
-jumlah parameter, durasi, test_acc (sekali). Satu analisis kesalahan per model (kelas yang
-sering tertukar).
+*(Belum diisi - akan terisi otomatis oleh `python run_all.py` pada Sprint akhir)*[cite: 1]
 
 ## Analisis
-Mengapa hasilnya berbeda: penjelasan mekanistik yang diuji (bukan hanya "A lebih baik dari
-B"); bedakan fakta eksperimen, interpretasi, dan dugaan.
+*(Belum diisi - akan dianalisis setelah seluruh hasil eksperimen Sprint 1-3 keluar)*
 
 ## Rekomendasi
-Model mana yang layak untuk anggaran komputasi ini, dengan alasan dari bukti dan batas
-berlakunya.
+*(Belum diisi - akan ditulis pada Sprint akhir)*
 
 ## Pembagian kerja
 | Anggota | NIM | Jalur | Tugas sampingan | Bagian laporan yang ditulis |
 |---|---|---|---|---|
+| Muhammad Naufal Ramadhan | 123450113 | cnn / baseline | Penjaga Data & Evaluasi (Setup data.py, MANIFEST.json, baseline) | Bagian Protokol & Hasil |
+| Tarisya | 123450052 | <Pilih: tl/rnn/trf/ae> | Pengelola Dokumentasi & AI Log | Bagian Rekomendasi & Pembagian kerja |
+| Afifah (Fifah) | 123450002 | <Pilih: tl/rnn/trf/ae> | Penanggung Jawab QA / Reviewer PR | Bagian Ringkasan & Analisis |
 
-Komponen yang tidak tersedia (bila ada): siapa, mengapa, dan dampaknya pada komparasi.
+Komponen yang tidak tersedia: Tidak ada. Semua modul protokol dasar Sprint 0 telah dikonfigurasi.
