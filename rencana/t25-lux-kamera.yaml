@@ -1,0 +1,50 @@
+# Rencana eksperimen tim 25: Lux meter dari citra kamera
+# Label: Otomatis: sensor cahaya BH1750
+
+tim: 25
+judul: Lux meter dari citra kamera
+pembimbing: Ade Lailani
+pilar: Citra
+
+seed: 1025
+ulangan: 6
+durasi_kondisi_detik: 5
+jeda_detik: 1
+
+rekam:
+  audio:
+    aktif: false
+  kamera:
+    aktif: true
+    interval_detik: 0.5
+    lebar: 1280
+    tinggi: 720
+
+faktor:
+  cahaya_ruang:
+    jenis: manual
+    taraf:
+      - lampu ruang menyala
+      - lampu ruang mati
+      - jendela/tirai terbuka
+    instruksi: 'Atur ruang: {taraf}'
+  lampu:
+    - 0
+    - 32
+    - 64
+    - 96
+    - 128
+    - 160
+    - 192
+    - 224
+    - 255
+
+metode:
+  jenis_tugas: Regresi
+  masukan_model: Citra 224×224
+  metrik_utama: MAE, MAPE
+  jalur:
+    - CNN
+    - TL
+    - AE
+  pembanding_non_dl: Kecerahan rata-rata + regresi linear
