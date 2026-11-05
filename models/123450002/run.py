@@ -1,3 +1,4 @@
+# Update kerangka Autoencoder Tim 25 - Afifah
 import os
 import json
 import torch
