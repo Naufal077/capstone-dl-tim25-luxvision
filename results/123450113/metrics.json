@@ -1,0 +1,14 @@
+{
+  "metrik": {
+    "val_rmse": 0.305678,
+    "val_mae": 0.205148,
+    "val_r2": 0.999999
+  },
+  "seed": 2026,
+  "data_hash": "aef356658cd3238b570e22f13bffe665",
+  "perangkat": "cpu laptop",
+  "model": "baseline_luxvision",
+  "n_val": 10,
+  "n_test": 0,
+  "durasi_detik": 0.3
+}
