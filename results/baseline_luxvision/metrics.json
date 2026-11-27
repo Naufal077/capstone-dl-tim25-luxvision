@@ -1,14 +1,12 @@
 {
-  "metrik": {
-    "val_rmse": 0.305678,
-    "val_mae": 0.205148,
-    "val_r2": 0.999999
-  },
+  "model": "brightness_linear_regression",
   "seed": 2026,
-  "data_hash": "aef356658cd3238b570e22f13bffe665",
+  "metrik": {
+    "val_mae": 3.2189643383026123,
+    "val_mape": 2.131699667541211
+  },
+  "durasi_detik": 5.568273305892944,
   "perangkat": "cpu laptop",
-  "model": "baseline_luxvision",
-  "n_val": 10,
-  "n_test": 0,
-  "durasi_detik": 0.3
+  "n_val": 192,
+  "data_hash": "82d4170d749cca628272977e45417aca"
 }

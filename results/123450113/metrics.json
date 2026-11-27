@@ -1,14 +1,16 @@
 {
   "metrik": {
-    "val_rmse": 0.305678,
-    "val_mae": 0.205148,
-    "val_r2": 0.999999
+    "val_rmse": 9.414479,
+    "val_mae": 7.041013,
+    "val_r2": -0.292789,
+    "val_mape": 4.733935561880407
   },
-  "seed": 2026,
-  "data_hash": "aef356658cd3238b570e22f13bffe665",
-  "perangkat": "cpu laptop",
-  "model": "baseline_luxvision",
-  "n_val": 10,
+  "seed": 1,
+  "data_hash": "82d4170d749cca628272977e45417aca",
+  "perangkat": "NVIDIA GeForce RTX 2050",
+  "model": "tl",
+  "n_val": 192,
   "n_test": 0,
-  "durasi_detik": 0.3
+  "durasi_detik": 25.84,
+  "jumlah_fold": 1
 }
