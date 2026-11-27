@@ -1,4 +1,4 @@
-# Laporan tim — LUXVISION (Tim 25)
+﻿# Laporan tim — LUXVISION (Tim 25)
 
 ## Ringkasan
 Eksperimen ini membandingkan lima keluarga model deep learning pada kasus klasifikasi/regresi dataset LUXVISION dengan protokol evaluasi yang dibakukan. Temuan utama akan dilaporkan setelah seluruh model menyelesaikan evaluasi pada Sprint akhir.
@@ -25,6 +25,7 @@ Perbandingan antar-model dijaga keadilannya dengan aturan berikut:
 |---|---|---|---|---|
 | Muhammad Naufal Ramadhan | 123450113 | cnn / baseline | Penjaga Data & Evaluasi (Setup data.py, MANIFEST.json, baseline) | Bagian Protokol & Hasil |
 | Tarisya | 123450052 | <Pilih: tl/rnn/trf/ae> | Pengelola Dokumentasi & AI Log | Bagian Rekomendasi & Pembagian kerja |
-| Afifah (Fifah) | 123450002 | <Pilih: tl/rnn/trf/ae> | Penanggung Jawab QA / Reviewer PR | Bagian Ringkasan & Analisis |
+| Afifah (Fifah) | 123450002 | ae | Penanggung Jawab QA / Reviewer PR | Bagian Ringkasan & Analisis |
 
 Komponen yang tidak tersedia: Tidak ada. Semua modul protokol dasar Sprint 0 telah dikonfigurasi.
+
