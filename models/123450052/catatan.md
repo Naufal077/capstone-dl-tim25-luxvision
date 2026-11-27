@@ -38,7 +38,7 @@ Sebagai konteks, artefak baseline yang tersedia pada data hash sama melaporkan M
 
 ## Evaluasi
 
-`run.py` menyimpan prediksi validasi ke `results/123450052/pred_val.npy` dan memanggil `src.common.evaluate` untuk membuat `metrics.json`. Evaluator bersama saat ini menghitung MAE, RMSE, dan R²; MAPE dicetak sebagai informasi tambahan oleh skrip. Test set belum tersedia pada loader utama, sehingga opsi `--final` ditolak.
+`run.py` menyimpan prediksi validasi ke `results/123450052/pred_val.npy` dan memanggil `src.common.evaluate` untuk membuat `metrics.json`. Setelah evaluator selesai, skrip menambahkan MAPE dari pasangan label/prediksi validasi yang sama; metrik MAE, RMSE, dan R² tetap dihitung evaluator bersama. Test set belum tersedia pada loader utama, sehingga opsi `--final` ditolak.
 
 ## Status verifikasi
 

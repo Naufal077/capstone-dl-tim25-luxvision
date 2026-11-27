@@ -10,6 +10,7 @@ belum tersedia pada protokol saat ini, jadi opsi --final sengaja ditolak.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -221,7 +222,14 @@ def main() -> None:
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"
     subprocess.run(cmd, check=True, cwd=ROOT, env=env)
-    print(f"val_mape: {val_mape:.6f}% (laporan tambahan; evaluator bersama tidak mencatat MAPE)")
+    metrics_path = output / "metrics.json"
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+    metrics["metrik"]["val_mape"] = round(float(val_mape), 6)
+    metrics_path.write_text(
+        json.dumps(metrics, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"val_mape: {val_mape:.6f}%")
     print(f"Prediksi tersimpan di {pred_path}")
 
 
