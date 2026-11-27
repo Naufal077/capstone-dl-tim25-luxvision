@@ -1,4 +1,4 @@
-
+﻿
 from __future__ import annotations
 
 import argparse
@@ -29,8 +29,12 @@ def ke_tensor(X):
 
     if X.ndim != 4 or X.shape[1] != 3:
         raise ValueError(f"Bentuk citra tidak sesuai: {X.shape}")
+    t = torch.tensor(X, dtype=torch.float32)
+    if t.shape[2:] != (224, 224):
+        t = torch.nn.functional.interpolate(t, size=(224, 224), mode="bilinear", align_corners=False)
+    return t
 
-    return torch.tensor(X, dtype=torch.float32)
+    
 
 
 def latih_dan_prediksi(seed: int, final: bool):
@@ -122,7 +126,7 @@ def latih_dan_prediksi(seed: int, final: bool):
     )
 
     epochs = 30
-    batch_size = min(8, len(X_train))
+    batch_size = min(32, len(X_train))
 
     if batch_size < 1:
         raise ValueError("Data training kosong.")
@@ -149,6 +153,8 @@ def latih_dan_prediksi(seed: int, final: bool):
 
             loss.backward()
             optimizer.step()
+        if (epoch + 1) % 5 == 0 or epoch == 0:
+            print(f"  Epoch {epoch+1}/{epochs} - loss: {loss.item():.4f}", flush=True)
 
     model.eval()
 
@@ -215,3 +221,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
