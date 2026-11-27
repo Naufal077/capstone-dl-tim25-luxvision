@@ -1,0 +1,14 @@
+{
+  "metrik": {
+    "val_rmse": 12.301683,
+    "val_mae": 9.159818,
+    "val_r2": -1.207314
+  },
+  "seed": 1,
+  "data_hash": "82d4170d749cca628272977e45417aca",
+  "perangkat": "cpu",
+  "model": "cnn",
+  "n_val": 192,
+  "n_test": 0,
+  "durasi_detik": 205.92
+}
